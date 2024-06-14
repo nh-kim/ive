@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내 웹사이트</title>
+    <style>
+        body {
+            margin: 0;
+            background: black;
+            color: white;
+            font-family: '맑은 고딕', sans-serif;
+        }
+        nav {
+           background-color: #000;
+           padding: 10px;
+       }
+       nav a {
+           color: white;
+           text-decoration: none;
+           padding: 5px 10px;
+           margin-right: 5px;
+       }
+       nav a:hover {
+           color: black;
+           background-color: white;
+           border-radius: 15px;
+       }
+       .active {
+           color: black;
+           background-color: #FFF;
+           border-radius: 15px;
+       }        .container {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+      .active { color: Black; background-color: #FFF; border-radius: 15px; }
+        .container {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .content {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            max-width: 1200px;
+            height: 780px;
+        }
+        .image-container {
+            width: 400px;
+            height: 400px;
+            position: fixed;
+            top: 50%;
+            right: 100px;
+            transform: translateY(-50%);
+            overflow: hidden;
+        }
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 0;
+            transition: border-radius 0.3s ease;
+        }
+        .image-container a:hover img {
+            border-radius: 50%;
+        }
+        .text-container {
+            flex-grow: 1;
+            max-width: 500px;
+            padding: 20px;
+            text-align: left;
+            position: relative;
+        }
+        .title {
+            font-size: 32px;
+            font-weight: bold;
+        }
+        .subtitle {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .lyrics-container {
+            width: 700px;
+            height: 500px;
+            overflow-y: scroll;
+            padding: 20px;
+            box-sizing: border-box;
+            margin-right: 20px;
+            margin-left: -100px; /* 더 왼쪽으로 이동 */
+        }
+        .lyrics-container::-webkit-scrollbar {
+            display: none;
+        }
+        .description span, .album-description p {
+            font-size: 16px;
+            line-height: 2; /* 행간 조정 */
+            opacity: 0;
+            animation: fadeIn 1s ease forwards;
+        }
+        .description span {
+            display: block;
+            animation: fadeInUp 1s ease forwards;
+            animation-delay: calc(var(--order) * 0.2s);
+        }
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+        .option {
+            padding: 10px 20px;
+            color: white;
+            cursor: pointer;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+        }
+        .album-description {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            z-index: 1;
+            transition: transform 0.3s ease;
+            transform: translateY(-100%);
+        }
+        .album-description.show {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+            <nav>
+       <a href="all.html" class="active">all</a>
+        <a href="Newjins.html">Newjins</a>
+        <a href="Aespa.html">Aespa</a>
+        <a href="Ive.html">Ive</a>
+        <a href="Ateez.html">Ateez</a>
+        <a href="Tws.html">Tws</a>
+    </nav>
+    <div class="album-description">
+        <p>아이브 - 해야</p>
+        <p>2024년 4월 29일에 발매된 IVE의 13번째 음반이자 두 번째 EP다.</p>
+        <p>'해야 (HEYA)'는 강렬한 랩으로 시작해 후렴에서 분위기를 압도하며 변화무쌍한 매력을 전달하는 곡이다. 남녀노소 따라 부를 수 있는 중독성 있는 멜로디와 해와 관련된 고전설화 '해를 사랑한 호랑이'로 2024년 아이브 버전으로 재구성된 가사가 인상적인 곡이다.</p>
+    </div>
+    <div class="container">
+        <div class="content">
+            <div class="lyrics-container">
+                <div class="title">해야</div>
+                <div class="subtitle">아이브</div>
+                <div class="description">
+                    <span style="--order: 1;">Let’s get it</span>
+                    <span style="--order: 2;">Look at it</span>
+                    <span style="--order: 3;">Pay attention</span>
+                    <span style="--order: 4;">얼어붙은 맘 어디 깨볼까?</span>
+                    <span style="--order: 5;">놀라버렸던 네 심장 말이야</span>
+                    <span style="--order: 6;">맘에 들었어 넌 그냥 Say yes</span>
+                    <span style="--order: 7;">내가 널 부르면 “얼음 땡”</span>
+                    <span style="--order: 8;">(And remember)</span>
+                    <span style="--order: 9;">(Da da da dun dun)</span>
+                    <span style="--order: 10;">널 노리는 내 두 눈 (Uh huh)</span>
+                    <span style="--order: 11;">숨을 죽인 그다음 (Uh huh)</span>
+                    <span style="--order: 12;">한 발 낮춘 attitude (My attitude)</span>
+                    <span style="--order: 13;">때를 기다리는 pose (Ah woo)</span>
+                    <span style="--order: 14;">어둠 속 빛난 tiger eyes (Woo)</span>
+                    <span style="--order: 15;">날 감춘 채로 다가가 (Uh huh uh huh)</span>
+                    <span style="--order: 16;">새빨간 말로 홀려 놔 (Eh)</span>
+                    <span style="--order: 17;">방심한 순간 claw</span>
+                    <span style="--order: 18;">우린 더 높이</span>
+                    <span style="--order: 19;">하늘에 닿을 것처럼 외쳐 너를 깨워</span>
+                    <span style="--order: 20;">올려 봐 노려봐 넌 내 거니까 다</span>
+                    <span style="--order: 21;">자꾸 널 보면 탐이 탐이 나</span>
+                    <span style="--order: 22;">해야 해야 해야</span>
+                    <span style="--order: 23;">한입에 널 삼킬 때야</span>
+                    <span style="--order: 24;">(탐이 탐이 나)</span>
+                    <span style="--order: 25;">해야 해야 해야</span>
+                    <span style="--order: 26;">이미 내가 이긴 패야</span>
+                    <span style="--order: 27;">(널 보면 탐이 탐이 나)</span>
+                    <span style="--order: 28;">해야 해야 해야</span>
+                    <span style="--order: 29;">뜨겁게 떠오르는 해야</span>
+                    <span style="--order: 30;">별안간 홀린 그 순간 Bite</span>
+                    <span style="--order: 31;">단 한 번에 난 널 휘리휘리 Catch ya </span>
+                    <span style="--order: 32;">더 높이 Keep it up</span>
+                    <span style="--order: 33;">Uh huh</span>
+                    <span style="--order: 34;">Happily ever after? Nope!</span>
+                    <span style="--order: 35;">(Da da da dun dun)</span>
+                    <span style="--order: 36;">못 기다린대 못 돼버린 내 맘이</span>
+                    <span style="--order: 37;">겁 따윈 없는 척하지 마 너 감히 (Oh oh)</span>
+                    <span style="--order: 38;">멀어져 넌 가니</span>
+                    <span style="--order: 39;">어차피 한 입 거리 (Hey)</span>
+                    <span style="--order: 40;">옳지 착하지 더 이리이리 오렴</span>
+                    <span style="--order: 41;">네 맘 나 주면 안 잡아먹지 Right now</span>
+                    <span style="--order: 42;">내 발톱 아래 뭘 숨겼을지 Watch out</span>
+                    <span style="--order: 43;">우린 더 높이</span>
+                    <span style="--order: 45;">하늘에 닿을 것처럼 외쳐 너를 깨워 (깨워)</span>
+                    <span style="--order: 46;">올려 봐 노려봐 넌 내 거니까 다</span>
+                    <span style="--order: 47;">자꾸 널 보면 탐이 탐이 나</span>
+                    <span style="--order: 48;">해야 해야 해야 (해야)</span>
+                    <span style="--order: 49;">한입에 널 삼킬 때야 (Umm yeah)</span>
+                    <span style="--order: 50;">(탐이 탐이 나)</span>
+                    <span style="--order: 51;">해야 해야 해야 (Woo woo)</span>
+                    <span style="--order: 52;">이미 내가 이긴 패야</span>
+                    <span style="--order: 53;">(널 보면 탐이 탐이 나)</span>
+                    <span style="--order: 54;">해야 해야 해야</span>
+                    <span style="--order: 55;">뜨겁게 떠오르는 해야</span>
+                    <span style="--order: 56;">별안간 홀린 그 순간 Bite</span>
+                    <span style="--order: 57;">단 한 번에 난 널 휘리휘리 Catch ya</span>
+                    <span style="--order: 58;">휘리휘리 휘리휘리 </span>
+                    <span style="--order: 59;">휘리휘리 휘리휘리</span>
+                    <span style="--order: 60;">더 붉게 더 밝게</span>
+                    <span style="--order: 61;">타올라 뜨거워도 좋으니</span>
+                    <span style="--order: 62;">더 높게 더 높게</span>
+                    <span style="--order: 63;">숨어도 넌 내 손바닥 안이니</span>
+                    <span style="--order: 64;">또 긴 밤 아래 널 감출 테니</span>
+                    <span style="--order: 65;">Chew and swallow </span>
+                    <span style="--order: 66;">Get ready for it, baby</span>
+                    <span style="--order: 67;">(Listen when I say) </span>
+                    <span style="--order: 68;">(Yeah)</span>
+                    <span style="--order: 69;">자꾸 널 보면 탐이 탐이 나</span>
+                    <span style="--order: 70;">해야 해야 해야 (Oh oh)</span>
+                    <span style="--order: 71;">한입에 널 삼킬 때야</span>
+                    <span style="--order: 72;">(탐이 탐이 나) </span>
+                    <span style="--order: 73;">(해야) 해야 해야 해야 </span>
+                    <span style="--order: 74;">(Uh huh uh huh Uh huh uh huh)</span>
+                    <span style="--order: 75;">이미 내가 이긴 패야 (Ah ah)</span>
+                    <span style="--order: 76;">널 보면 탐이 탐이 나</span>
+                    <span style="--order: 77;">해야 해야 해야</span>
+                    <span style="--order: 78;">(Uh huh uh huh Uh huh uh huh)</span>
+                    <span style="--order: 79;">뜨겁게 떠오르는 해야</span>
+                    <span style="--order: 80;">별안간 홀린 그 순간 Bite</span>
+                    <span style="--order: 81;">Da da da dun dun dun</span>
+                </div>
+            </div>
+            <div class="image-container">
+                <a href="https://youtu.be/07EzMbVH3QE?si=QOQRkChVF79Xwu1W" target="_blank">
+                    <img src="https://i.imgur.com/0d0akXy.jpg" alt="이미지">
+                </a>
+            </div>
+        </div>
+    </div>
+    <script>
+        const albumDescription = document.querySelector('.album-description');
+        const container = document.querySelector('.container');
+
+        container.addEventListener('click', () => {
+            albumDescription.classList.toggle('show');
+        });
+
+        container.addEventListener('scroll', () => {
+            albumDescription.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>
